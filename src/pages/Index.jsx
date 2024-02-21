@@ -1,8 +1,11 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import { Box, Button, Center, Container, Flex, Heading, Image, Stack, Text, VStack } from "@chakra-ui/react";
 import { FaArrowRight, FaCloud, FaRocket } from "react-icons/fa";
 
 const Index = () => {
+  const navigate = useNavigate();
+
   return (
     <Container maxW="container.xl">
       <Stack spacing={10}>
@@ -15,7 +18,7 @@ const Index = () => {
             <Text fontSize="lg" color="gray.600">
               Harness the power of cloud computing to streamline operations, enhance productivity, and drive growth.
             </Text>
-            <Button rightIcon={<FaArrowRight />} colorScheme="teal" size="lg">
+            <Button rightIcon={<FaArrowRight />} colorScheme="teal" size="lg" onClick={() => navigate("/get-started")}>
               Get Started
             </Button>
           </VStack>
